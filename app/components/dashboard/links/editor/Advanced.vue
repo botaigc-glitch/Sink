@@ -206,11 +206,11 @@ async function aiOg() {
               </FieldDescription>
               <Input
                 :id="`${idPrefix}-${field.name}`"
-                :name="field.name"
+                :name="`${idPrefix}-link-password`"
                 :model-value="formatPasswordDisplay(field.state.value)"
                 :placeholder="$t('links.form.password_placeholder')"
                 :type="isMaskedLinkPassword(field.state.value) ? 'text' : 'password'"
-                autocomplete="off"
+                autocomplete="new-password"
                 @blur="field.handleBlur"
                 @input="field.handleChange(($event.target as HTMLInputElement).value)"
               />
